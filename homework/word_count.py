@@ -107,7 +107,7 @@ def hadoop(input_folder, output_folder, mapper_fn, reducer_fn):
     create_success_file(output_folder)
 
 
-if __name__ == "__main__":
+if _name_ == "_main_":
 
     initialize_folder("files/input/")
     delete_folder("files/output/")
@@ -123,5 +123,3 @@ if __name__ == "__main__":
 
     end_time = time.time()
     print(f"Tiempo de ejecución: {end_time - start_time:.2f} segundos")
-    
-    
