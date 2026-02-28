@@ -26,13 +26,14 @@ def initialize_folder(folder):
     else:
         os.makedirs(folder)
 
+
 def delete_folder(folder):
     if os.path.exists(folder):
         clear_folder(folder)
         os.rmdir(folder)
 
-def generate_file_copies(n):
 
+def generate_file_copies(n):
 
     for file in glob.glob("files/raw/*"):
         with open(file, "r", encoding="utf-8") as f:
@@ -122,3 +123,5 @@ if __name__ == "__main__":
 
     end_time = time.time()
     print(f"Tiempo de ejecución: {end_time - start_time:.2f} segundos")
+    
+    
